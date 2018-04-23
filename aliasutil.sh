@@ -101,3 +101,5 @@ aliasutil () {
 aliasutil-die() {
     echo >&2 "$*"
 }
+
+aliasutil load
