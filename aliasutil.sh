@@ -52,7 +52,7 @@ safe-alias () {
 
 aliasutil () {
     local command
-    alias_file="$HOME/.aliases"
+    alias_file="$ZDOTDIR/aliasrc"
     if [ -n "$alias_file" ]; then
         touch "$alias_file"
     fi;
