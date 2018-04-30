@@ -58,9 +58,6 @@ aliasutil () {
     fi;
 
     case $1 in
-         replace-alias)
-             alias-alias 'aliasutil add'
-             ;;
          add)
              shift
              safe-alias "$@"
@@ -84,7 +81,7 @@ aliasutil () {
              shift
              removed="$1"
              unalias "$1"
-             sed -Ei "/^alias '$removed=/ d" "$alias_file"
+             sed -Ei '' "/^alias '$removed=/ d" "$alias_file"
              ;;
          list)
              cat "$alias_file"
